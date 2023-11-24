@@ -1,0 +1,20 @@
+.border-radius {
+  background-color: black;
+  margin: 2rem auto;
+  width: 400px;
+  height: 400px;
+  border: thick solid red;
+  border-radius: 1rem;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 4rem;
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 5rem;
+}
+
+.border-radius-2 {
+  background-color: black;
+  margin: 2rem auto;
+  width: 400px;
+  height: 400px;
+  border: thick solid red;
+}

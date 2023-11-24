@@ -1,0 +1,129 @@
+/* Estilos de la fuente
+font-family
+font-size
+font-weight
+font-style
+font-variant
+line-height
+font  */
+
+.font {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  font-style: oblique;
+  font-variant: small-caps;
+  line-height: 2;
+  font: italic normal bold 1rem / 1.5 georgia;
+}
+
+/* 
+Formato woff o woff2 - Web Open Font Format
+*/
+
+/* Font display: 
+
+auto: permite que el navegador utilice el método predeterminado que suele ser block
+
+block: oculta brevemente el texto hasta que la fuente haya sido descargada por completo
+
+swap: indica al navegador que utilice la fuente alternativa para mostrar el texto hasta que la fuente personalizada se haya cargado por completo
+
+fallback: es una mezcla de auto y swap
+
+optional: ocultará el texto, luego lo cargará con la fuente alternativa y finalmente aplicará la fuente personalizada */
+
+@font-face {
+  font-family: "Caveat";
+  src: url("../fonts/Caveat-VariableFont_wght.ttf") format("woff");
+  /* src: url("../fonts/Caveat-VariableFont_wght.ttf") format("woff"),
+  src: url("../fonts/Caveat-VariableFont_wght.ttf2") format("woff2") */
+}
+
+.caveat {
+  font-family: "Caveat", sans-serif;
+  font-size: 2rem;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "dancingscript";
+  src: url("../fonts/DancingScript-VariableFont_wght.ttf") format("woff");
+}
+
+.dancingscript {
+  font-family: "dancingscript", sans-serif;
+  font-size: 2rem;
+  font-display: swap;
+}
+
+.shadowil {
+  font-family: "Shadows Into Light", cursive;
+  font-size: 2rem;
+}
+
+/* Text-align: centrado, justificado y a los lados
+text-decoration: subrayados y sobrerayado
+text-indent: primera línea con sangría
+text-overflow: se usa cuando no se puede mostrar todo el texto y lo muestra como puntos suspensivos. Para que funcione, se debe tener la propidedad overflow: hidden y adicionalmente una propoedad llamada white-space: nowrap.
+text-transform: cambiar a mayúsculas, minúsculas, inicial mayúscula, etc...
+letter-spacing: cambio del tamaño que existe entre cada letra
+white-space: qué hacer con los espacios en blanco
+word-break: cómo se rompen las palabras	(como poner el guión en el cuaderno para continuar escribiendo la misma palabra en otro renglón
+word-spacing: espacio entre palabras
+writing-mode: direcicón de la escritura (para que el texto quede en vertical) y desde que lado se empueza a escribir (de derecha a izquiera o viceversa)
+ */
+
+.text {
+  font-size: 2rem;
+  text-align: left;
+  text-decoration: overline;
+  text-decoration: none;
+  text-indent: 2rem;
+  text-transform: capitalize;
+  text-transform: lowercase;
+  text-transform: uppercase;
+  text-transform: none;
+  letter-spacing: 0.5rem;
+  word-break: break-all;
+  writing-mode: vertical-rl;
+  writing-mode: vertical-lr;
+}
+
+.text a {
+  text-decoration: none;
+}
+
+.text-overflow {
+  background-color: blanchedalmond;
+  border: thin solid black;
+  padding: 1rem;
+  width: 50%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-indent: 2rem;
+}
+
+.white-space {
+  white-space: pre;
+}
+
+.word-spacing {
+  font-size: 2rem;
+  word-spacing: 1rem;
+}
+
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}

@@ -1,0 +1,96 @@
+.color-by-name {
+  background-color: coral;
+  color: rebeccapurple;
+  border: thick solid greenyellow;
+}
+/*Sistema hexadecimal
+ 0123456789ABCDEF
+ 
+ RGB (Medios digitales) vd CMYK (Medios impresos)
+ 
+ Colores en Hexadecimal van a ser colores de 6 dígitos
+ #FF6600*/
+
+.color-hex {
+  background-color: #ff6600;
+  background-color: #000000;
+  background-color: #00000050;
+  color: #12ac78;
+  border: thick solid #ff6600;
+  border: thick solid #ffffff;
+  border: thick solid #000000;
+  border: thick solid #0000ff;
+}
+
+/*Si se va a simplificar (usar 3 valores em lugar de 6), debe hacerse para todas la propiedades, si a los 6 números se le agregan otros dos, esos dos corresponderán a la opacidad que va de 00 a 99%*/
+
+/*Sistema RGB
+Máximo valor que puedo tener es el 255, el mínimo 0. El RGB acepta 8 bits por canal. La opacidad se agrega con una a (RGBA) que es el canal alfa y sería el cuarto parámetro usando decimales (0.5 = 50% de opacidad)
+*/
+
+.color-rgb {
+  background-color: rgb(34, 94, 22);
+  background-color: rgba(243, 97, 0, 0.5);
+  color: rgb(26, 49, 26);
+  border: thick solid rgb(43, 231, 26);
+}
+
+/*Sistema HSL
+HueSatulationLightness (Tono-Saturación-Luminosidad): usa el círculo cromático
+Hue: Representa un ángulo
+0° = red
+60° = yellow
+120° = green
+180° = cyan
+240° = blue
+360° = magenta
+El segundo valor es la saturación (intensidad del color): se maneja por porcentajes (0% (escala de grises, 100% color puro).
+El tercer valor es la luminosidad (0%= color negro, 100% = blanco
+Para agregar el canal alfa (opacidad) se hace lo mismo que en el RGB, se agrega una a al final y también se usan decimales.
+
+*/
+
+.color-hsl {
+  background-color: hsl(332, 82%, 48%);
+  background-color: hsla(332, 82%, 48%, 0.5);
+  color: hsl(240, 700%, 50%);
+  border: thick solid hsl(0, 71%, 37%);
+}
+
+/* Valor transparent: Color transparente es igual a aplicar rgba (0,0,0,0
+Valor currentColor: Hereda el valor por defecto o asignado de la propiedad color (del texto) del ancestro que tenga definida esta propiedad, busca del ancestro mas lejano al más cercano*/
+
+.color-transparent-current {
+  background-color: darkmagenta;
+  background-color: currentColor;
+  background-color: transparent;
+  color: blueviolet;
+  border: thick solid currentColor;
+}
+
+.opacity {
+  background-color: orchid;
+  color: navy;
+  border: thick solid black;
+  opacity: 0.5;
+  opacity: 0.75;
+}
+
+/*.opacity-00 {
+  opacity: 0;
+}
+
+.opacity-10 {
+  opacity: 1;
+}
+
+.opacity-20 {
+  opacity: 0.2;
+}
+
+.opacity-30 {
+  opacity: 0.3;
+}
+
+Así se hacen los frameworks
+*/
