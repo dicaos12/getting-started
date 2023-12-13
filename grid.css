@@ -1,0 +1,18 @@
+.container {
+  background-color: #22495a;
+  border: 3px solid black;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) 1fr 1fr;
+  gap: 8px;
+}
+
+.container div {
+  background: #babfbf;
+  border: 2px solid #adabac;
+  border-radius: 6px;
+}
+
+body {
+  background: #819299;
+}
