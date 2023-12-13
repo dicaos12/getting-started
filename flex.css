@@ -4,35 +4,47 @@ body {
 
 .parent {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
+  /*row es el eje primcipal en el que se está trabajando*/
   border: 4px solid #000;
-  width: 300px;
+  width: 250px;
+  height: 500px;
   box-sizing: border-box;
-
-
-  /*Valores por defecto*/
-  flex-grow: 0;
-  /*los elementos NO crecen*/
-  flex-shrink: 1;
-  /*los elementos pueden reducir su tamaño a un tamaño más pequeño que su flex-basis*/
-  flex-basis: auto;
-  /*tamaño inicial de los elementos*/
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+  /*gap es una propiedad que permite establecer un espacio entre los elementos hijos*/
 }
+
 
 /*Establece cómo debe funcionar un contenedor respecto a sus hijos, es decir, el flex no se tiene que utilizar en el hijo sino en el contenedor. Esto hace que el contenedor sea flexible y que va a permitir que todos los hijos sean alineados de una manera más eficiente tanto horizontal como vertical incluso cuando se tienen tamaños desconocidos o dinámicos*/
 
 .item {
   border: 1px solid;
+  box-sizing: border-box;
   opacity: .9;
-  width: 50px;
   height: 50px;
-  background: #09f;
+  width: 50px;
 }
 
 .item:first-child {
   background-color: navy;
+  /*en este caso el primero va a tener el doble de ancho que los otros dos*/
+  /*order: 3;*/
+  height: 20px;
+}
+
+.item:nth-child(2),
+.item:nth-child(5) {
+  background: #09f;
+  /*order: 1;*/
+  height: 30px;
+  align-self: flex-start;
 }
 
 .item:last-child {
   background: turquoise;
+  /*order: 2;*/
+  height: 40px;
 }
