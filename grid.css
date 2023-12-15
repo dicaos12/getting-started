@@ -4,7 +4,9 @@
   border-radius: 4px;
   display: grid;
   grid-template-columns: minmax(100px, 1fr) 1fr 1fr;
-  gap: 8px;
+  grid-auto-rows: 50px;
+  gap: 16px;
+  padding: 4px;
 }
 
 .container div {
@@ -15,4 +17,52 @@
 
 body {
   background: #819299;
+  margin: 0;
+}
+
+.container div:first-child {
+  background: lightsalmon;
+  border-color: salmon;
+  grid-row: 2/4;
+  opacity: .5;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 35px, 1fr, 100px;
+  min-height: 100vh;
+  grid-template-areas:
+    "header header sidebar"
+    "content content content"
+    "footer footer footer";
+}
+
+@media (width > 400px) {
+  .box {
+    grid-template-areas:
+      "header header ."
+      "sidebar content content"
+      "footer footer footer";
+  }
+}
+
+.box header {
+  background: lightgreen;
+  grid-area: header;
+}
+
+.box aside {
+  background: lightcyan;
+  grid-area: sidebar;
+}
+
+.box main {
+  background: lightcoral;
+  grid-area: content;
+}
+
+.box footer {
+  background: lightgoldenrodyellow;
+  grid-area: footer;
 }
